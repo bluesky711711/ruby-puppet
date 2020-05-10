@@ -1,0 +1,9 @@
+require 'spec_helper'
+require 'puppet/face'
+
+describe Puppet::Face[:key, '0.0.1'] do
+  it "should be deprecated" do
+    expect(subject.deprecated?).to be_truthy
+  end
+end
+
